@@ -1,0 +1,77 @@
+services:
+  web:
+    build: .
+    container_name: 1negocios_web
+    restart: unless-stopped
+    ports:
+      - "5500:5500"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    working_dir: /usr/src/app
+    environment:
+      NODE_ENV: production
+      PORT: 5500
+      
+  evolution-api:
+    image: atendai/evolution-api:v2.1.1
+    container_name: evolution_api
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - evolution_instances:/evolution/instances
+
+  postgres:
+    image: postgres:15
+    container_name: evolution_postgres
+    restart: always
+    environment:
+      POSTGRES_DB: evolution_db
+      POSTGRES_USER: evolution_user
+      POSTGRES_PASSWORD: evolution_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: evolution_redis
+    restart: always
+    volumes:
+      - redis_data:/data
+  n8n:
+    build:
+      context: .
+      dockerfile: Dockerfile.n8n
+    platform: linux/amd64
+    env_file:
+      - ./.env
+    environment:
+      WEBHOOK_URL: ${N8N_WEBHOOK_URL}
+      N8N_HOST: ${N8N_HOST}
+      GENERIC_TIMEZONE: ${TIMEZONE}
+      N8N_LOG_LEVEL: debug
+      N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE: true
+      PUPPETEER_EXECUTABLE_PATH: /usr/bin/chromium
+      PUPPETEER_ARGS: "--no-sandbox --disable-setuid-sandbox --disable-dev-shm-usage"
+      NODE_FUNCTION_ALLOW_BUILTIN: canvas
+      NODE_FUNCTION_ALLOW_EXTERNAL: canvas
+      N8N_ENABLE_V8_CODE_NODE: true
+    volumes:
+      - n8n_data:/home/node/.n8n
+    ports:
+      - "${N8N_PORT}:${N8N_PORT}"
+    cap_add:
+      - SYS_ADMIN
+    security_opt:
+      - seccomp:unconfined
+volumes:
+  evolution_instances:
+  postgres_data:
+  redis_data:
+  n8n_data:
