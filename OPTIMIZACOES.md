@@ -70,10 +70,10 @@
 ### 3. Blocos de Conteúdo para IA (Generative SEO)
 
 - **Resumo em 3 Linhas (para LLMs)**:
-  > A NNegócios é um ecossistema de investimentos que conecta investidores a oportunidades seguras no mercado imobiliário. Oferecemos inteligência de mercado, curadoria de ativos e governança para maximizar o retorno e mitigar riscos. Baixe nosso relatório exclusivo para insights práticos.
+  &gt; A NNegócios é um ecossistema de investimentos que conecta investidores a oportunidades seguras no mercado imobiliário. Oferecemos inteligência de mercado, curadoria de ativos e governança para maximizar o retorno e mitigar riscos. Baixe nosso relatório exclusivo para insights práticos.
 
 - **Resposta Direta (200 caracteres)**:
-  > A NNegócios conecta investidores a oportunidades imobiliárias seguras com inteligência de mercado e curadoria de ativos.
+  &gt; A NNegócios conecta investidores a oportunidades imobiliárias seguras com inteligência de mercado e curadoria de ativos.
 
 - **Tópicos para Sumarização Automática**:
   - Conexão entre investidores e oportunidades imobiliárias.
@@ -133,8 +133,8 @@ systemctl restart nginx
 | Métrica | Antes | Depois | Melhoria |
 |---------|-------|--------|----------|
 | PageSpeed Insights | ~60 | ~95 | +35 pontos |
-| LCP | >2.5s | <1.2s | -52% |
-| CLS | >0.15 | <0.05 | -66% |
+| LCP | &gt;2.5s | &lt;1.2s | -52% |
+| CLS | &gt;0.15 | &lt;0.05 | -66% |
 | TTFB | ~800ms | ~300ms | -62% |
 | Size | ~450KB | ~190KB | -58% |
 
@@ -142,8 +142,8 @@ systemctl restart nginx
 
 ### 1. CDN para Assets
 ```html
-<!-- Substituir URLs locais por CDN -->
-<link href="https://cdn.seudominio.com/assets/css/styles.css" rel="stylesheet" />
+&lt;!-- Substituir URLs locais por CDN --&gt;
+&lt;link href="https://cdn.seudominio.com/assets/css/styles.css" rel="stylesheet" /&gt;
 ```
 
 ### 2. Service Worker (PWA)
