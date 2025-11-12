@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nnegocios.com.vc/sitemap.xml
