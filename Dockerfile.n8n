@@ -1,0 +1,24 @@
+FROM n8nio/n8n:latest
+USER root
+
+RUN apk add --no-cache \
+    chromium \
+    nss \
+    freetype \
+    harfbuzz \
+    ca-certificates \
+    ttf-freefont \
+    bash \
+    wget \
+    udev \
+    build-base \
+    cairo-dev \
+    pango-dev \
+    jpeg-dev \
+    giflib-dev \
+    librsvg-dev \
+    pixman-dev
+
+RUN npm install -g canvas
+
+USER node
