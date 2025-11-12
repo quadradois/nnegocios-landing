@@ -1,0 +1,43 @@
+/* Otimizações de Performance - CSS adicional */
+
+/* Suporte para WebP com JavaScript fallback */
+.webp .hero__bg {
+    background-image: url('../images/hero-bg-1.webp');
+}
+
+.no-webp .hero__bg {
+    background-image: url('../images/hero-bg-1.png');
+}
+
+/* Preload de recursos críticos - já incluído no HTML */
+.hero__bg {
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Otimização para imagens lazy load */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Preload hover states */
+.btn:hover {
+    will-change: transform;
+}
+
+/* Prevent FOUC (Flash of Unstyled Content) */
+.hero {
+    min-height: 100vh;
+    background-color: var(--bg);
+}
+
+/* Optimize countdown timer */
+.countdown__timer {
+    will-change: contents;
+}

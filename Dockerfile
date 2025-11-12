@@ -2,11 +2,11 @@ FROM node:18-alpine
 
 WORKDIR /usr/src/app
 
+# Instalar http-server globalmente
+RUN npm install -g http-server
+
 # Copiar package.json e package-lock.json
 COPY package*.json ./
-
-# Instalar dependências
-RUN npm ci --only=production
 
 # Copiar o código fonte
 COPY . .

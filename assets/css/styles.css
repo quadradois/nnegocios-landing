@@ -99,7 +99,7 @@ body::before {
   perspective: 1px;
 }
 .hero__bg {
-  background-image: url('../images/hero-bg-1.png');
+  background-image: url('../images/hero-bg-1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -110,6 +110,11 @@ body::before {
   width: 100%;
   height: 120%;
   z-index: 1;
+}
+
+/* Fallback para navegadores que não suportam WebP */
+.no-webp .hero__bg {
+  background-image: url('../images/hero-bg-1.png');
 }
 
 /* Otimização mobile-first para parallax */
@@ -731,10 +736,15 @@ body::before {
   align-items: center;
   overflow: hidden;
   perspective: 1px;
-  background-image: url('../images/hero-bg-2.png');
+  background-image: url('../images/hero-bg-2.webp');
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
+}
+
+/* Fallback para navegadores que não suportam WebP */
+.no-webp .section.ebook {
+  background-image: url('../images/hero-bg-2.png');
 }
 
 .section.ebook::before {
@@ -1277,15 +1287,20 @@ body::before {
   /* Enhanced Mobile Countdown */
   .countdown__container {
     max-width: 100%;
-    padding: 120px 20px 24px;
+    padding: 40px 20px 28px;
     margin: 0 16px;
-    min-height: 400px;
-    gap: 12px;
+    min-height: auto;
+    gap: 16px;
   }
   
   .countdown__logo {
-    width: 95px;
-    top: 110px;
+    position: static;
+    width: 88px;
+    top: auto;
+    transform: none;
+    margin: 0 auto 16px;
+    display: block;
+    animation: none;
   }
   
   .countdown__header {

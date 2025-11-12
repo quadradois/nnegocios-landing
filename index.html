@@ -15,6 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="assets/images/hero-bg-1.webp" type="image/webp" />
+    <link rel="preload" as="image" href="assets/images/logo.webp" type="image/webp" />
+    
     <!-- Critical CSS Inline - Above the Fold -->
     <style>
       :root {
@@ -55,7 +59,7 @@
       }
       
       .hero__bg {
-        background-image: url('../images/hero-bg-1.png');
+        background-image: url('./assets/images/hero-bg-1.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -66,6 +70,11 @@
         width: 100%;
         height: 120%;
         z-index: 1;
+      }
+      
+      /* Fallback para navegadores que não suportam WebP */
+      .no-webp .hero__bg {
+        background-image: url('./assets/images/hero-bg-1.png');
       }
       
       .hero__content { 
@@ -113,7 +122,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="assets/css/performance.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="assets/css/styles.css" /></noscript>
+    <noscript><link rel="stylesheet" href="assets/css/performance.css" /></noscript>
+
+    <!-- Performance optimization script -->
+    <script src="assets/js/performance.js" async></script>
 
     <!-- SEO: Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
