@@ -1,156 +1,616 @@
-&lt;!DOCTYPE html&gt;
-&lt;html lang="pt-BR"&gt;
-&lt;head&gt;
-    &lt;!-- Meta Tags Otimizadas para SEO --&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;meta name="description" content="Descubra como a IA pode transformar seu negócio. Baixe nosso e-book gratuito e aprenda estratégias práticas para implementar IA na sua empresa."&gt;
-    &lt;meta name="keywords" content="IA para negócios, inteligência artificial, transformação digital, e-book IA, estratégias de IA"&gt;
-    &lt;meta name="author" content="1Negocios"&gt;
-    &lt;meta name="robots" content="index, follow"&gt;
-    &lt;meta property="og:title" content="IA para Negócios: Guia Prático"&gt;
-    &lt;meta property="og:description" content="Aprenda a usar IA para impulsionar seu negócio. Baixe agora!"&gt;
-    &lt;meta property="og:image" content="https://seusite.com/imagens/og-image.jpg"&gt;
-    &lt;meta property="og:url" content="https://seusite.com"&gt;
-    &lt;meta property="og:type" content="website"&gt;
-    &lt;meta name="twitter:card" content="summary_large_image"&gt;
-    &lt;meta name="twitter:title" content="IA para Negócios: Guia Prático"&gt;
-    &lt;meta name="twitter:description" content="Descubra o poder da IA nos negócios."&gt;
-    &lt;meta name="twitter:image" content="https://seusite.com/imagens/twitter-image.jpg"&gt;
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NNegócios - Ecossistema de Oportunidades e Investimentos</title>
+    <meta name="description" content="Descubra oportunidades únicas em economia, desenvolvimento imobiliário e investimentos seguros. Acesse nosso e-book exclusivo!" />
+    <meta name="keywords" content="investimentos, economia, desenvolvimento imobiliário, oportunidades, e-book, NNegócios" />
+    <meta name="author" content="NNegócios" />
+    <meta property="og:title" content="NNegócios - Ecossistema de Oportunidades" />
+    <meta property="og:description" content="Descubra oportunidades únicas em investimentos e desenvolvimento imobiliário" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nnegocios.com.vc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical CSS Inline - Above the Fold -->
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --bg-2: #0f151c;
+        --text: #e6edf3;
+        --muted: #9fb2c7;
+        --accent: #00e5ff;
+        --primary: #3b82f6;
+        --card: rgba(16, 22, 29, 0.7);
+        --border: rgba(255, 255, 255, 0.08);
+      }
+      
+      * { box-sizing: border-box; }
+      html, body { 
+        height: 100%; 
+        margin: 0; 
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      .hero__bg {
+        background-image: url('../images/hero-bg-1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        z-index: 1;
+      }
+      
+      .hero__content { 
+        position: relative; 
+        z-index: 2; 
+        text-align: center;
+      }
+      
+      .hero__title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #00e5ff 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .hero__subtitle {
+        font-size: 1.25rem;
+        color: var(--muted);
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: transform 0.2s ease;
+      }
+      
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+    
+    <!-- Defer non-critical CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="assets/css/styles.css" /></noscript>
 
-    &lt;title&gt;IA para Negócios: Transforme Sua Empresa com Inteligência Artificial&lt;/title&gt;
-
-    &lt;!-- CSS Crítico Inline para Above-the-Fold --&gt;
-    &lt;style&gt;
-        /* Estilos críticos para hero section */
-        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #333; }
-        header { background: linear-gradient(135deg, #4a90e2, #9013fe); color: white; text-align: center; padding: 60px 20px; }
-        h1 { font-size: 2.5em; margin-bottom: 20px; }
-        canvas { display: block; margin: 0 auto; border: 1px solid #ddd; background: #fff; }
-        /* Mais estilos críticos... */
-    &lt;/style&gt;
-
-    &lt;!-- Defer CSS Não Crítico --&gt;
-    &lt;link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"&gt;
-    &lt;noscript&gt;&lt;link rel="stylesheet" href="styles.css"&gt;&lt;/noscript&gt;
-
-    &lt;!-- Schema Markup JSON-LD --&gt;
-    &lt;script type="application/ld+json"&gt;
+    <!-- SEO: Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "1Negocios",
-      "url": "https://seusite.com",
-      "logo": "https://seusite.com/imagens/logo.png",
-      "sameAs": [
-        "https://facebook.com/1negocios",
-        "https://twitter.com/1negocios",
-        "https://linkedin.com/company/1negocios"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "NNegócios",
+          "url": "https://nnegocios.com.vc",
+          "logo": "https://nnegocios.com.vc/assets/images/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-48-99150-3001",
+            "contactType": "Customer Service"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://nnegocios.com.vc",
+          "name": "NNegócios",
+          "publisher": {
+            "@type": "Organization",
+            "name": "NNegócios"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://nnegocios.com.vc",
+          "name": "NNegócios - Ecossistema de Oportunidades e Investimentos",
+          "description": "Descubra oportunidades únicas em economia, desenvolvimento imobiliário e investimentos seguros. Acesse nosso e-book exclusivo!",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://nnegocios.com.vc"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://nnegocios.com.vc/assets/images/hero-bg-1.png"
+          }
+        },
+        {
+          "@type": "Book",
+          "name": "E-book: Economia, Desenvolvimento Imobiliário e Investimento Seguro",
+          "author": {
+            "@type": "Organization",
+            "name": "NNegócios"
+          },
+          "url": "https://nnegocios.com.vc/#lead-capture",
+          "workExample": [
+            {
+              "@type": "Book",
+              "isbn": "",
+              "bookEdition": "1st Edition",
+              "bookFormat": "https://schema.org/EBook",
+              "potentialAction": {
+                "@type": "ReadAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://nnegocios.com.vc/#lead-capture",
+                  "actionPlatform": [
+                    "https://schema.org/DesktopWebPlatform",
+                    "https://schema.org/IOSPlatform",
+                    "https://schema.org/AndroidPlatform"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que é a NNegócios?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>A NNegócios é um ecossistema de oportunidades e investimentos focado em conectar empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado. Atuamos para gerar valor através de curadoria, governança e análise de cenários econômicos.</p>"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Para quem é o e-book?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>O e-book \"Economia, Desenvolvimento Imobiliário e Investimento Seguro\" é destinado a investidores, construtores, incorporadores e qualquer pessoa interessada em entender a dinâmica do mercado imobiliário e como tomar decisões de investimento mais seguras e informadas.</p>"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como a NNegócios garante a segurança dos investimentos?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Nossa abordagem se baseia em três pilares: <strong>Inteligência de Mercado</strong> para análise de cenários, <strong>Deal Flow Qualificado</strong> com curadoria rigorosa de oportunidades, e <strong>Segurança e Transparência</strong>, aplicando due diligence e estruturação jurídica para mitigar riscos e garantir previsibilidade.</p>"
+              }
+            }
+          ]
+        }
       ]
     }
-    &lt;/script&gt;
-    &lt;script type="application/ld+json"&gt;
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "url": "https://seusite.com",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://seusite.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    &lt;/script&gt;
-    &lt;script type="application/ld+json"&gt;
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "IA para Negócios",
-      "description": "Guia prático sobre IA para negócios",
-      "publisher": {
-        "@type": "Organization",
-        "name": "1Negocios"
-      }
-    }
-    &lt;/script&gt;
-    &lt;script type="application/ld+json"&gt;
-    {
-      "@context": "https://schema.org",
-      "@type": "Book",
-      "name": "IA para Negócios: Guia Prático",
-      "author": "1Negocios",
-      "url": "https://seusite.com/ebook",
-      "bookFormat": "EBook",
-      "isbn": "978-1-234567-89-0"
-    }
-    &lt;/script&gt;
-    &lt;script type="application/ld+json"&gt;
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "O que é IA para negócios?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "IA para negócios envolve o uso de tecnologias de inteligência artificial para otimizar processos, melhorar decisões e impulsionar o crescimento."
-        }
-      },{
-        "@type": "Question",
-        "name": "Como baixar o e-book?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Preencha o formulário na página e receba o link de download por e-mail."
-        }
-      }]
-    }
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;header&gt;
-        &lt;h1&gt;Transforme Seu Negócio com IA&lt;/h1&gt;
-        &lt;p&gt;Baixe nosso e-book gratuito e descubra como a Inteligência Artificial pode revolucionar sua empresa.&lt;/p&gt;
-        &lt;canvas id="neuralNetwork" width="800" height="400"&gt;&lt;/canvas&gt;
-    &lt;/header&gt;
+    </script>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <canvas class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="container hero__content">
+        
+        
+        <div class="hero__grid">
+          <div class="hero__copy">
+            
+            <h1 class="hero__title">
+              <span class="title__highlight">Você vende?</span>
+              <span class="title__highlight">Você compra?</span>
+              <span class="title__main">Ou você faz negócios?</span>
+            </h1>
+            <p class="hero__subtitle">
+              A <strong>NNegócios</strong> é um ecossistema de oportunidades e investimentos. Conectamos empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado.
+            </p>
 
-    &lt;section id="valor"&gt;
-        &lt;h2&gt;Por Que a IA é Essencial para Seu Negócio?&lt;/h2&gt;
-        &lt;ul&gt;
-            &lt;li&gt;Aumente a eficiência operacional&lt;/li&gt;
-            &lt;li&gt;Melhore a tomada de decisões com dados&lt;/li&gt;
-            &lt;li&gt;Personalize experiências para clientes&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/section&gt;
+            <div class="hero__offer">
+              <div class="offer__content">
+                <h3 class="offer__title">NInteligência</h3>
+                <p class="offer__description">Com o selo NINTELIGÊNCIA, a empresa fornece dados, comparativos e insights estratégicos para investidores, construtores e incorporadores.</p>
+              </div>
+            </div>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--large" href="#lead-capture">
+                <span class="btn__text">Baixe o relatório de novembro</span>
+              </a>
+              <div class="cta__info">
+                
+                <span class="cta__guarantee">🔒 100% gratuito • Sem spam</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="countdown__container">
+              <!-- Logo -->
+              <picture>
+  <source srcset="assets/images/logo.webp" type="image/webp">
+  <img src="assets/images/logo.png" alt="NNegócios" class="countdown__logo" loading="lazy">
+</picture>
+              
+              <div class="countdown__header">
+                <h2 class="countdown__title">Faltam apenas</h2>
+                <p class="countdown__subtitle">Inauguração do Ecossistema</p>
+              </div>
+              
+              <div class="countdown__content">
+                <div class="countdown__timer" id="countdown">
+                  <div class="countdown__item">
+                    <div class="countdown__card">
+                      <span class="countdown__number" id="days">90</span>
+                      <div class="countdown__progress">
+                        <div class="countdown__progress-bar" id="days-progress"></div>
+                      </div>
+                      <span class="countdown__label">Dias</span>
+                    </div>
+                  </div>
+                  <div class="countdown__separator">:</div>
+                  <div class="countdown__item">
+                    <div class="countdown__card">
+                      <span class="countdown__number" id="hours">00</span>
+                      <div class="countdown__progress">
+                        <div class="countdown__progress-bar" id="hours-progress"></div>
+                      </div>
+                      <span class="countdown__label">Horas</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    &lt;section id="ebook"&gt;
-        &lt;h2&gt;Baixe Nosso E-book Gratuito&lt;/h2&gt;
-        &lt;form id="leadForm"&gt;
-            &lt;input type="text" placeholder="Nome" required&gt;
-            &lt;input type="email" placeholder="E-mail" required&gt;
-            &lt;input type="tel" placeholder="WhatsApp" required&gt;
-            &lt;button type="submit"&gt;Baixar Agora&lt;/button&gt;
-        &lt;/form&gt;
-    &lt;/section&gt;
+    <main>
+      <!-- Seção de Valor -->
+      <section class="section value">
+        <div class="container">
+          <h2>Valor que gera negócios</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Inteligência de mercado</h3>
+              <p>Leitura prática da economia, cenários e ciclos para orientar decisões imobiliárias e de investimento.</p>
+            </article>
+            <article class="card">
+              <h3>Deal flow qualificado</h3>
+              <p>Pipeline de oportunidades de, projetos e ativos reais com curadoria e governança.</p>
+            </article>
+            <article class="card">
+              <h3>Segurança e transparência</h3>
+              <p>Critérios claros, Due diligence e estruturação para reduzir risco e dar previsibilidade ao capital.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    &lt;section id="cta"&gt;
-        &lt;h2&gt;Agende uma Consultoria Gratuita&lt;/h2&gt;
-        &lt;p&gt;Fale com nossos especialistas sobre como implementar IA no seu negócio.&lt;/p&gt;
-        &lt;a href="https://calendly.com/seu-link" class="btn"&gt;Agendar Agora&lt;/a&gt;
-    &lt;/section&gt;
+      <!-- Isca: E-book -->
+      <section class="section ebook">
+        <div class="container">
+          <div class="ebook__grid">
+            <div class="ebook__copy">
+              <h2>E-book gratuito: Economia, Desenvolvimento Imobiliário e Investimento Seguro</h2>
+              <ul class="list">
+                <li>Entenda a realidade econômica e os impactos nos imóveis.</li>
+                <li>Como o desenvolvimento imobiliário cria valor sustentável.</li>
+                <li>Framework de investimento seguro em ativos reais.</li>
+              </ul>
+              <p class="micro">Conteúdo gratuito. Sem spam.</p>
+            <a class="btn btn--primary" href="#lead-capture">Baixe o relatório de novembro</a>
+            </div>
+            <div class="ebook__visual">
+              <div class="ebook__mockup">
+            <picture>
+  <source srcset="assets/images/ebook.webp" type="image/webp">
+  <img src="assets/images/ebook.png" alt="E-book NNegócios - Economia, Desenvolvimento Imobiliário e Investimento Seguro" class="mockup__image" loading="lazy">
+</picture>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    &lt;footer&gt;
-        &lt;p&gt;&amp;copy; 2023 1Negocios. Todos os direitos reservados.&lt;/p&gt;
-    &lt;/footer&gt;
+      
 
-    &lt;!-- Script para Animação de Rede Neural --&gt;
-    &lt;script&gt;
-        const canvas = document.getElementById('neuralNetwork');
+      <!-- CTAs Múltiplos e Estratégicos -->
+      <section id="lead-capture" class="section capture">
+        <div class="container">
+          <div class="capture__card">
+            <h2>Como gostaria de receber o seu ebook?</h2>
+            <p>Selecione sua opção preferida para receber nosso ebook exclusivo sobre investimentos:</p>
+            
+            <div class="cta-buttons">
+              <a href="https://wa.me/5548991503001?text=Olá! Gostaria de receber o ebook exclusivo sobre investimentos da NNegócios." class="btn-cta btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icon">💬</span>
+                <div class="btn-content">
+                  <strong>Receber via WhatsApp</strong>
+                  <small>Entrega instantânea</small>
+                </div>
+              </a>
+              
+              <a href="https://calendly.com/nnegocios/ebook" class="btn-cta btn-calendar" target="_blank" rel="noopener noreferrer">
+                <span class="btn-icon">📅</span>
+                <div class="btn-content">
+                  <strong>Agendar Reunião</strong>
+                  <small>Receba com consultoria</small>
+                </div>
+              </a>
+              
+              <a href="mailto:contato@nnegocios.com.vc?subject=Solicitação do Ebook de Investimentos&body=Olá! Gostaria de receber o ebook exclusivo sobre investimentos." class="btn-cta btn-email">
+                <span class="btn-icon">📧</span>
+                <div class="btn-content">
+                  <strong>Receber por Email</strong>
+                  <small>Envio direto na caixa de entrada</small>
+                </div>
+              </a>
+            </div>
+            
+              <div class="contact-info">
+              <p><strong>Ou entre em contato diretamente:</strong></p>
+              <div class="contact-details">
+                <span>📞 (48) 99150-3001</span>
+                <span>✉️ contato@nnegocios.com.vc</span>
+              </div>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEO: FAQ Section -->
+      <section class="section faq">
+        <div class="container">
+          <h2>Perguntas Frequentes (FAQ)</h2>
+          <div>
+            <h3>O que é a NNegócios?</h3>
+            <div>
+              <div>
+                <p>A NNegócios é um ecossistema de oportunidades e investimentos focado em conectar empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado. Atuamos para gerar valor através de curadoria, governança e análise de cenários econômicos.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Para quem é o e-book?</h3>
+            <div>
+              <div>
+                <p>O e-book "Economia, Desenvolvimento Imobiliário e Investimento Seguro" é destinado a investidores, construtores, incorporadores e qualquer pessoa interessada em entender a dinâmica do mercado imobiliário e como tomar decisões de investimento mais seguras e informadas.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3>Como a NNegócios garante a segurança dos investimentos?</h3>
+            <div>
+              <div>
+                <p>Nossa abordagem se baseia em três pilares: <strong>Inteligência de Mercado</strong> para análise de cenários, <strong>Deal Flow Qualificado</strong> com curadoria rigorosa de oportunidades, e <strong>Segurança e Transparência</strong>, aplicando due diligence e estruturação jurídica para mitigar riscos e garantir previsibilidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div class="footer__brand">
+            <picture>
+  <source srcset="assets/images/logo.webp" type="image/webp">
+  <img src="assets/images/logo.png" alt="NNegócios" class="hero__logo" loading="lazy">
+</picture>
+        </div>
+        <div class="footer__text">Ecossistema de oportunidades e investimentos.</div>
+        <div class="footer__micro">© 2025 NNegócios — Todos os direitos reservados.</div>
+      </div>
+    </footer>
+
+
+
+    <script>
+      // Canvas de redes neurais dinâmicas no HERO
+      (function() {
+        const hero = document.querySelector('.hero');
+        const canvas = document.querySelector('.hero__canvas');
+        if (!hero || !canvas) return;
         const ctx = canvas.getContext('2d');
-        // Código para animação de rede neural...
-    &lt;/script&gt;
+        let width = 0, height = 0, dpr = Math.max(1, window.devicePixelRatio || 1);
+        let nodes = []; const maxNodes = 64; // quantidade de pontos
+        let mouse = { x: null, y: null };
 
-    &lt;!-- Integração com WhatsApp e Outros --&gt;
-    &lt;script src="assets/js/whatsapp-integration.js" defer&gt;&lt;/script&gt;
-    &lt;script src="assets/js/n8n-integration.js" defer&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+        function resize() {
+          const rect = hero.getBoundingClientRect();
+          width = Math.floor(rect.width); height = Math.floor(rect.height);
+          canvas.width = Math.floor(width * dpr);
+          canvas.height = Math.floor(height * dpr);
+          canvas.style.width = width + 'px';
+          canvas.style.height = height + 'px';
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function initNodes() {
+          nodes = Array.from({ length: maxNodes }, () => ({
+            x: Math.random() * width,
+            y: Math.random() * height,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: 1.2 + Math.random() * 1.6
+          }));
+        }
+
+        function step() {
+          ctx.clearRect(0, 0, width, height);
+          // fundo sutil para dar brilho
+          // ctx.fillStyle = 'rgba(0,0,0,0.0)'; ctx.fillRect(0,0,width,height);
+          const linkDist = Math.min(width, height) * 0.16;
+          const mouseInfluence = 0.06;
+
+          for (let i = 0; i < nodes.length; i++) {
+            const n = nodes[i];
+            // movimento básico
+            n.x += n.vx; n.y += n.vy;
+            if (n.x < 0 || n.x > width) n.vx *= -1;
+            if (n.y < 0 || n.y > height) n.vy *= -1;
+
+            // atração leve ao mouse
+            if (mouse.x !== null && mouse.y !== null) {
+              const dx = mouse.x - n.x; const dy = mouse.y - n.y; const dist = Math.sqrt(dx*dx + dy*dy);
+              if (dist < linkDist) { n.vx += (dx / dist) * mouseInfluence; n.vy += (dy / dist) * mouseInfluence; }
+            }
+          }
+
+          // desenhar conexões
+          for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+              const a = nodes[i], b = nodes[j];
+              const dx = a.x - b.x; const dy = a.y - b.y; const dist = Math.sqrt(dx*dx + dy*dy);
+              if (dist < linkDist) {
+                const alpha = Math.max(0.08, 1 - dist / linkDist);
+                ctx.strokeStyle = `rgba(0, 229, 255, ${alpha * 0.35})`;
+                ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+              }
+            }
+          }
+
+          // desenhar nós
+          for (let i = 0; i < nodes.length; i++) {
+            const n = nodes[i];
+            ctx.fillStyle = 'rgba(124, 77, 255, 0.5)';
+            ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill();
+          }
+
+          requestAnimationFrame(step);
+        }
+
+        resize(); initNodes(); step();
+        window.addEventListener('resize', () => { resize(); initNodes(); });
+        window.addEventListener('mousemove', (e) => {
+          const rect = hero.getBoundingClientRect();
+          mouse.x = e.clientX - rect.left; mouse.y = e.clientY - rect.top;
+        });
+        window.addEventListener('mouseleave', () => { mouse.x = mouse.y = null; });
+      })();
+
+      // Smooth scroll para CTAs
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          const target = document.querySelector(link.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+
+      // Parallax effect
+      function updateParallax() {
+        const scrolled = window.pageYOffset;
+        const parallaxElement = document.querySelector('.hero__bg');
+        const speed = 0.5; // Parallax speed (0.5 = half the scroll speed)
+        
+        if (parallaxElement) {
+          parallaxElement.style.transform = `translateY(${scrolled * speed}px)`;
+        }
+      }
+      
+      // Add scroll event listener for parallax
+      window.addEventListener('scroll', updateParallax);
+      
+      // Initial parallax position
+      updateParallax();
+
+      // Simple Countdown Logic
+      function initCountdown() {
+        const targetDate = new Date(Date.now() + 90 * 24 * 60 * 60 * 1000).getTime();
+        function updateCountdown() {
+          const now = Date.now();
+          const distance = targetDate - now;
+          
+          if (distance < 0) {
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            return;
+          }
+          
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          
+          document.getElementById('days').textContent = String(days).padStart(2, '0');
+          document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+          
+          // Update progress bars
+          const daysProgress = document.getElementById('days-progress');
+          const hoursProgress = document.getElementById('hours-progress');
+          
+          if (daysProgress) {
+            const maxDays = 90;
+            const daysPercentage = Math.max(0, Math.min(100, (days / maxDays) * 100));
+            daysProgress.style.width = daysPercentage + '%';
+          }
+          
+          if (hoursProgress) {
+            const hoursPercentage = (hours / 24) * 100;
+            hoursProgress.style.width = hoursPercentage + '%';
+          }
+        }
+        
+        // Update countdown immediately
+        updateCountdown();
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+      }
+      
+      // Add hover effects to countdown cards
+      function initCountdownInteractions() {
+        const cards = document.querySelectorAll('.countdown__card');
+        cards.forEach(card => {
+          card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-4px) scale(1.02)';
+          });
+          
+          card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+          });
+        });
+      }
+      
+
+      
+      // Initialize countdown and interactions when page loads
+      document.addEventListener('DOMContentLoaded', () => {
+        initCountdown();
+        initCountdownInteractions();
+      });
+    </script>
+  </body>
+  </html>

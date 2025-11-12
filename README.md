@@ -1,53 +1,86 @@
-# 1Negócios - Site de Captura de Leads
+# 1Negócios Landing Page
 
-## Descrição
-Este é um site de captura de leads para a 1Negócios, projetado para coletar informações de potenciais clientes interessados em oportunidades de investimento imobiliário. O site inclui formulários de inscrição, integração com webhook para automação e otimização para SEO e performance.
+Landing page responsiva para captação de leads, com foco em conversão segura e integração direta aos canais de atendimento da 1Negócios.
 
-## Funcionalidades
-- Formulário de captura de leads com validação
-- Integração com n8n para automação de workflows
-- Otimização SEO com robots.txt e sitemap.xml
-- Design responsivo e otimizado para mobile
-- Envio de e-mails automáticos via webhook
+## ✨ Destaques
 
-## Pré-requisitos
-- Node.js v18 ou superior
-- Docker (opcional para deploy)
-- Conta no GitHub para deploy
+- **UX focada em conversão**: CTA múltiplo (WhatsApp, Calendly, e-mail) com cards em glassmorphism.
+- **Visual moderno**: Hero parallax, animação leve de rede neural e mockup do e-book.
+- **SEO preparado**: Metatags, Schema.org (Organization, WebPage, FAQ, Book) e assets otimizados.
+- **Hardening**: Links externos com `rel="noopener"`, remoção de armazenamento local de dados e sem scripts invasivos.
 
-## Instruções de Instalação
-1. Clone o repositório: `git clone https://github.com/quadradois/nnegocios-landing.git`
-2. Instale as dependências: `npm install`
-3. Configure as variáveis de ambiente: Copie `.env.example` para `.env` e preencha os valores
+## 📦 Stack
 
-## Instruções de Execução
-- Desenvolvimento: `npm run dev`
-- Produção: `npm run build` seguido de `npm start`
-- Com Docker: `docker-compose up -d`
+- HTML + CSS + JS vanilla (sem frameworks).
+- Servido por Nginx dentro de contêiner Docker (`docker-compose.yml`).
+- Serviços auxiliares previstos: `evolution_api`, Redis, Postgres e n8n.
 
-## Estrutura do Projeto
-- `assets/`: Arquivos estáticos (CSS, JS, imagens)
-- `workflows/`: Workflows do n8n
-- `Dockerfile`: Configuração Docker para o site
-- `Dockerfile.n8n`: Configuração Docker para n8n
-- `.htaccess` e `nginx.conf`: Configurações de servidor
+## 🧪 Desenvolvimento Local
 
-## Configuração
-- Edite `.env` para configurar porta, webhook, e-mail, etc.
-- Para SEO, atualize `robots.txt` e `sitemap.xml`
+```bash
+git clone https://github.com/quadradois/nnegocios-landing.git
+cd nnegocios-landing
+npm install
+npm run web   # Servidor local em http://localhost:5500
+```
 
-## Contato
-Para suporte, entre em contato via e-mail: support@1negocios.com
+## 🚀 Deploy Automatizado (Ubuntu 24.04 “virgem”)
 
-## Opções de Deploy
-- Hospedagem compartilhada com Apache/Nginx
-- Deploy em Vercel ou Netlify para static sites
-- Docker para ambientes containerizados
+Use o script `deploy.sh` para provisionar Docker e subir toda a stack.
 
-## Troubleshooting
-- Erro de porta: Verifique se a porta configurada em `.env` está livre
-- Problemas com webhook: Teste a integração com n8n
-- Otimização: Consulte `OPTIMIZACOES.md` para dicas de performance
+```bash
+sudo apt-get update
+sudo apt-get install -y git
+git clone https://github.com/quadradois/nnegocios-landing.git
+cd nnegocios-landing
+chmod +x deploy.sh
+sudo ./deploy.sh
+```
 
-## Licença
-MIT License - Veja o arquivo LICENSE para detalhes.
+O script executa:
+
+- Instalação/atualização do Docker Engine + plugin `docker compose`.
+- Inclusão automática do usuário no grupo `docker` (quando aplicável).
+- `docker compose pull` seguido de `docker compose up -d --remove-orphans`.
+- Exibe `docker compose ps` ao final para verificação rápida.
+
+> Após ser adicionado ao grupo `docker`, faça **logout/login** para usar Docker sem `sudo`.
+
+## 🗂️ Estrutura
+
+```text
+.
+├── assets/
+│   ├── css/
+│   ├── images/
+│   └── js/
+├── workflows/
+├── deploy.sh
+├── docker-compose.yml
+├── Dockerfile
+├── Dockerfile.n8n
+├── nginx.conf
+├── index.html
+├── package.json
+└── README.md
+```
+
+## 🛠️ Pós-deploy
+
+- **Atualizar serviços**: `sudo ./deploy.sh` (reaplica pull + up).
+- **Logs**: `docker compose logs -f <serviço>`.
+- **Parar stack**: `docker compose down`.
+
+## ❗ Troubleshooting
+
+- **Porta 8080 ocupada (Linux)**: `sudo ss -ltnp | grep 8080` e ajuste o serviço conflitante.
+- **Sem permissão no Docker**: garanta que o usuário esteja no grupo `docker` e inicie nova sessão.
+- **Assets quebrados**: confirme que a pasta `assets/` foi copiada e servida pelo Nginx do container `web`.
+
+## 📄 Licença
+
+Licença ISC.
+
+---
+
+Feito com ❤️ pela 1Negócios.
