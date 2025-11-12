@@ -1,122 +1,53 @@
 # 1Negócios - Site de Captura de Leads
 
-Site de landing page com integração WhatsApp para captura e gestão de leads.
+## Descrição
+Este é um site de captura de leads para a 1Negócios, projetado para coletar informações de potenciais clientes interessados em oportunidades de investimento imobiliário. O site inclui formulários de inscrição, integração com webhook para automação e otimização para SEO e performance.
 
-## 🚀 Funcionalidades
+## Funcionalidades
+- Formulário de captura de leads com validação
+- Integração com n8n para automação de workflows
+- Otimização SEO com robots.txt e sitemap.xml
+- Design responsivo e otimizado para mobile
+- Envio de e-mails automáticos via webhook
 
-- **Landing Page Responsiva**: Design moderno e otimizado para conversão
-- **Integração WhatsApp**: Botão direto para enviar mensagens via WhatsApp
-- **Formulário de Contato**: Com validação e tracking de conversões
-- **Design Moderno**: Interface limpa com gradientes e animações suaves
+## Pré-requisitos
+- Node.js v18 ou superior
+- Docker (opcional para deploy)
+- Conta no GitHub para deploy
 
-## 📋 Pré-requisitos
+## Instruções de Instalação
+1. Clone o repositório: `git clone https://github.com/quadradois/nnegocios-landing.git`
+2. Instale as dependências: `npm install`
+3. Configure as variáveis de ambiente: Copie `.env.example` para `.env` e preencha os valores
 
-- Python 3.6+ (para servidor de desenvolvimento)
+## Instruções de Execução
+- Desenvolvimento: `npm run dev`
+- Produção: `npm run build` seguido de `npm start`
+- Com Docker: `docker-compose up -d`
 
-## 🛠️ Instalação
+## Estrutura do Projeto
+- `assets/`: Arquivos estáticos (CSS, JS, imagens)
+- `workflows/`: Workflows do n8n
+- `Dockerfile`: Configuração Docker para o site
+- `Dockerfile.n8n`: Configuração Docker para n8n
+- `.htaccess` e `nginx.conf`: Configurações de servidor
 
-1. **Clone o repositório**:
-   ```bash
-   git clone <url-do-repositorio>
-   cd 1negocios
-   ```
+## Configuração
+- Edite `.env` para configurar porta, webhook, e-mail, etc.
+- Para SEO, atualize `robots.txt` e `sitemap.xml`
 
-2. **Configure as variáveis de ambiente** (se necessário):
-   ```bash
-   cp .env.example .env
-   # Edite o arquivo .env com suas configurações
-   ```
+## Contato
+Para suporte, entre em contato via e-mail: support@1negocios.com
 
-## 🚀 Como Executar
+## Opções de Deploy
+- Hospedagem compartilhada com Apache/Nginx
+- Deploy em Vercel ou Netlify para static sites
+- Docker para ambientes containerizados
 
-### Desenvolvimento Local
+## Troubleshooting
+- Erro de porta: Verifique se a porta configurada em `.env` está livre
+- Problemas com webhook: Teste a integração com n8n
+- Otimização: Consulte `OPTIMIZACOES.md` para dicas de performance
 
-```bash
-# Iniciar o site (porta 5500)
-npm run web
-
-# Ou usando Python diretamente
-python -m http.server 5500
-```
-
-### Produção
-
-Para deploy em produção, recomendamos:
-
-1. **Site Estático**: Hospedar em Netlify, Vercel ou GitHub Pages
-2. **Servidor Próprio**: Servir os arquivos estáticos via Apache/Nginx
-
-## 📁 Estrutura do Projeto
-
-```
-1negocios/
-├── assets/           # Arquivos estáticos
-│   ├── css/         # Estilos CSS
-│   ├── js/          # JavaScript customizado
-│   └── images/       # Imagens e ícones
-├── workflows/        # Pasta para workflows futuros
-├── index.html        # Página principal
-├── package.json      # Scripts de desenvolvimento
-├── .env.example      # Variáveis de ambiente exemplo
-├── .gitignore        # Arquivos ignorados pelo git
-└── README.md         # Este arquivo
-```
-
-## ⚙️ Configuração
-
-### Variáveis de Ambiente (Opcional)
-
-Crie um arquivo `.env` baseado no `.env.example` para configurações personalizadas.
-
-## 📞 Contato
-
-- **WhatsApp**: (48) 99150-3001
-- **Email**: contato@nnegocios.com.vc
-- **Site**: [1Negócios](http://localhost:5500)
-
-## 🔄 Deploy
-
-### Opção 1: Netlify/Vercel (Site Estático)
-
-1. Conecte seu repositório
-2. Configure build command: vazio (apenas sirva os arquivos estáticos)
-3. Set publish directory: `/` (raiz)
-
-### Opção 2: Servidor Próprio
-
-```bash
-# Clone o repositório
-git clone <repositorio>
-cd 1negocios
-
-# Sirva os arquivos estáticos
-# Usando Python:
-python -m http.server 5500
-
-# Ou configure seu servidor web (Apache/Nginx) para servir a pasta
-```
-
-## 🐛 Troubleshooting
-
-### Portas em Uso
-
-```bash
-# Verificar portas (Windows)
-netstat -ano | findstr :5500
-
-# Matar processo (Windows)
-taskkill /PID <PID> /F
-```
-
-### Erros Comuns
-
-- **Site não carrega**: Verifique se Python está instalado
-- **Arquivos não encontrados**: Verifique se o servidor está na pasta correta
-
-## 📄 Licença
-
-Este projeto está sob licença ISC.
-
----
-
-Desenvolvido com ❤️ pela 1Negócios
+## Licença
+MIT License - Veja o arquivo LICENSE para detalhes.
