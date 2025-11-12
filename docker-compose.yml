@@ -12,38 +12,7 @@ services:
     environment:
       NODE_ENV: production
       PORT: 5500
-      
-  evolution-api:
-    image: atendai/evolution-api:v2.2.3
-    container_name: evolution_api
-    restart: always
-    env_file:
-      - .env
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-      - redis
-    volumes:
-      - evolution_instances:/evolution/instances
 
-  postgres:
-    image: postgres:15
-    container_name: evolution_postgres
-    restart: always
-    environment:
-      POSTGRES_DB: evolution_db
-      POSTGRES_USER: evolution_user
-      POSTGRES_PASSWORD: evolution_pass
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-
-  redis:
-    image: redis:7
-    container_name: evolution_redis
-    restart: always
-    volumes:
-      - redis_data:/data
   n8n:
     build:
       context: .
@@ -54,6 +23,11 @@ services:
     environment:
       WEBHOOK_URL: ${N8N_WEBHOOK_URL}
       N8N_HOST: ${N8N_HOST}
+      N8N_PROTOCOL: ${N8N_PROTOCOL}
+      N8N_EDITOR_BASE_URL: ${N8N_EDITOR_BASE_URL}
+      N8N_API_BASE_URL: ${N8N_API_BASE_URL}
+      N8N_SECURE_COOKIE: ${N8N_SECURE_COOKIE}
+      N8N_TRUSTED_PROXIES: ${N8N_TRUSTED_PROXIES}
       GENERIC_TIMEZONE: ${TIMEZONE}
       N8N_LOG_LEVEL: debug
       N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE: true
@@ -65,13 +39,11 @@ services:
     volumes:
       - n8n_data:/home/node/.n8n
     ports:
-      - "${N8N_PORT}:${N8N_PORT}"
+      - "127.0.0.1:${N8N_PORT}:${N8N_PORT}"
     cap_add:
       - SYS_ADMIN
     security_opt:
       - seccomp:unconfined
+
 volumes:
-  evolution_instances:
-  postgres_data:
-  redis_data:
   n8n_data:

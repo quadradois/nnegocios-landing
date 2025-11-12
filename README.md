@@ -13,7 +13,7 @@ Landing page responsiva para captação de leads, com foco em conversão segura 
 
 - HTML + CSS + JS vanilla (sem frameworks).
 - Servido por Nginx dentro de contêiner Docker (`docker-compose.yml`).
-- Serviços auxiliares previstos: `evolution_api`, Redis, Postgres e n8n.
+- Serviços auxiliares previstos: n8n.
 
 ## 🧪 Desenvolvimento Local
 
@@ -73,7 +73,6 @@ O script executa:
 
 ## ❗ Troubleshooting
 
-- **Porta 8080 ocupada (Linux)**: `sudo ss -ltnp | grep 8080` e ajuste o serviço conflitante.
 - **Sem permissão no Docker**: garanta que o usuário esteja no grupo `docker` e inicie nova sessão.
 - **Assets quebrados**: confirme que a pasta `assets/` foi copiada e servida pelo Nginx do container `web`.
 
