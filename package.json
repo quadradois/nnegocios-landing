@@ -1,0 +1,19 @@
+{
+  "name": "1negocios",
+  "version": "1.0.0",
+  "description": "Site de captura de leads com integração WhatsApp",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run web",
+    "web": "npx http-server -p 5500 -a 0.0.0.0",
+    "setup": "npm install",
+    "clean": "rm -rf node_modules package-lock.json"
+  },
+  "keywords": ["whatsapp", "lead-capture", "landing-page"],
+  "author": "1Negocios",
+  "license": "ISC",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  }
+}
