@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NNegócios - Ecossistema de Oportunidades e Investimentos</title>
+    <meta name="description" content="Descubra oportunidades únicas em economia, desenvolvimento imobiliário e investimentos seguros. Acesse nosso e-book exclusivo!" />
+    <meta name="keywords" content="investimentos, economia, desenvolvimento imobiliário, oportunidades, e-book, NNegócios" />
+    <meta name="author" content="NNegócios" />
+    <meta property="og:title" content="NNegócios - Ecossistema de Oportunidades" />
+    <meta property="og:description" content="Descubra oportunidades únicas em investimentos e desenvolvimento imobiliário" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://nnegocios.com.vc" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical CSS Inline - Above the Fold -->
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --bg-2: #0f151c;
+        --text: #e6edf3;
+        --muted: #9fb2c7;
+        --accent: #00e5ff;
+        --primary: #3b82f6;
+        --card: rgba(16, 22, 29, 0.7);
+        --border: rgba(255, 255, 255, 0.08);
+      }
+      
+      * { box-sizing: border-box; }
+      html, body { 
+        height: 100%; 
+        margin: 0; 
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+      
+      .container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+      }
+      
+      .hero__bg {
+        background-image: url('../images/hero-bg-1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 120%;
+        z-index: 1;
+      }
+      
+      .hero__content { 
+        position: relative; 
+        z-index: 2; 
+        text-align: center;
+      }
+      
+      .hero__title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        background: linear-gradient(135deg, #00e5ff 0%, #3b82f6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      
+      .hero__subtitle {
+        font-size: 1.25rem;
+        color: var(--muted);
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: transform 0.2s ease;
+      }
+      
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+    </style>
+    
+    <!-- Defer non-critical CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="assets/css/styles.css" /></noscript>
+
+    <!-- SEO: Schema Markup (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "NNegócios",
+          "url": "https://nnegocios.com.vc",
+          "logo": "https://nnegocios.com.vc/assets/images/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-48-99150-3001",
+            "contactType": "Customer Service"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "WebSite",
+          "url": "https://nnegocios.com.vc",
+          "name": "NNegócios",
+          "publisher": {
+            "@type": "Organization",
+            "name": "NNegócios"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "url": "https://nnegocios.com.vc",
+          "name": "NNegócios - Ecossistema de Oportunidades e Investimentos",
+          "description": "Descubra oportunidades únicas em economia, desenvolvimento imobiliário e investimentos seguros. Acesse nosso e-book exclusivo!",
+          "isPartOf": {
+            "@type": "WebSite",
+            "url": "https://nnegocios.com.vc"
+          },
+          "primaryImageOfPage": {
+            "@type": "ImageObject",
+            "url": "https://nnegocios.com.vc/assets/images/hero-bg-1.png"
+          }
+        },
+        {
+          "@type": "Book",
+          "name": "E-book: Economia, Desenvolvimento Imobiliário e Investimento Seguro",
+          "author": {
+            "@type": "Organization",
+            "name": "NNegócios"
+          },
+          "url": "https://nnegocios.com.vc/#lead-capture",
+          "workExample": [
+            {
+              "@type": "Book",
+              "isbn": "",
+              "bookEdition": "1st Edition",
+              "bookFormat": "https://schema.org/EBook",
+              "potentialAction": {
+                "@type": "ReadAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://nnegocios.com.vc/#lead-capture",
+                  "actionPlatform": [
+                    "https://schema.org/DesktopWebPlatform",
+                    "https://schema.org/IOSPlatform",
+                    "https://schema.org/AndroidPlatform"
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O que é a NNegócios?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>A NNegócios é um ecossistema de oportunidades e investimentos focado em conectar empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado. Atuamos para gerar valor através de curadoria, governança e análise de cenários econômicos.</p>"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Para quem é o e-book?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Nosso e-book é ideal para empreendedores, investidores, profissionais do mercado imobiliário e qualquer pessoa interessada em entender as dinâmicas econômicas atuais e oportunidades de investimento seguro.</p>"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como recebo o e-book?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Após preencher o formulário com seus dados, você receberá o link para download do e-book diretamente no seu WhatsApp em instantes.</p>"
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "É realmente gratuito?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "<p>Sim! Nosso e-book é 100% gratuito. Acreditamos no poder da educação e informação para transformar oportunidades em resultados concretos.</p>"
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Ecossistema de Oportunidades</h1>
+          <p class="hero__subtitle">Conectamos empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado</p>
+          <a href="#lead-capture" class="btn">Acessar E-book Gratuito</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lead Capture Section -->
+    <section id="lead-capture" class="lead-section">
+      <div class="container">
+        <div class="lead-content">
+          <h2>E-book Exclusivo</h2>
+          <p><strong>Economia, Desenvolvimento Imobiliário e Investimento Seguro</strong></p>
+          <p>Receba insights valiosos e estratégias comprovadas diretamente no seu WhatsApp</p>
+          
+          <form id="lead-form" class="lead-form">
+            <input type="text" name="name" placeholder="Seu nome completo" required />
+            <input type="tel" name="phone" placeholder="Seu WhatsApp com DDD" required />
+            <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+            <button type="submit">Receber E-book Gratuito</button>
+          </form>
+          
+          <div class="benefits">
+            <div class="benefit">
+              <span>🚀</span>
+              <p>Estratégias práticas</p>
+            </div>
+            <div class="benefit">
+              <span>💡</span>
+              <p>Insights exclusivos</p>
+            </div>
+            <div class="benefit">
+              <span>📈</span>
+              <p>Análise de mercado</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
