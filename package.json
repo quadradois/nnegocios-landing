@@ -13,7 +13,7 @@
   "author": "1Negocios",
   "license": "ISC",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=7.0.0"
+    "node": "&gt;=16.0.0",
+    "npm": "&gt;=7.0.0"
   }
 }
