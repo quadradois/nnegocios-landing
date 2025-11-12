@@ -1,277 +1,156 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NNegócios - Ecossistema de Oportunidades e Investimentos</title>
-    <meta name="description" content="Descubra oportunidades únicas em economia, desenvolvimento imobiliário e investimentos seguros. Acesse nosso e-book exclusivo!" />
-    <meta name="keywords" content="investimentos, economia, desenvolvimento imobiliário, oportunidades, e-book, NNegócios" />
-    <meta name="author" content="NNegócios" />
-    <meta property="og:title" content="NNegócios - Ecossistema de Oportunidades" />
-    <meta property="og:description" content="Descubra oportunidades únicas em investimentos e desenvolvimento imobiliário" />
-    <meta property="og:type" content="website" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://nnegocios.com.vc" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Critical CSS Inline - Above the Fold -->
-    <style>
-      :root {
-        --bg: #0b0f14;
-        --bg-2: #0f151c;
-        --text: #e6edf3;
-        --muted: #9fb2c7;
-        --accent: #00e5ff;
-        --primary: #3b82f6;
-        --card: rgba(16, 22, 29, 0.7);
-        --border: rgba(255, 255, 255, 0.08);
-      }
-      
-      * { box-sizing: border-box; }
-      html, body { 
-        height: 100%; 
-        margin: 0; 
-        font-family: 'Inter', system-ui, -apple-system, sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        overflow-x: hidden;
-      }
-      
-      .container {
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 0 24px;
-      }
-      
-      .hero {
-        position: relative;
-        min-height: 100vh;
-        display: grid;
-        align-items: center;
-        overflow: hidden;
-      }
-      
-      .hero__bg {
-        background-image: url('../images/hero-bg-1.png');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 120%;
-        z-index: 1;
-      }
-      
-      .hero__content { 
-        position: relative; 
-        z-index: 2; 
-        text-align: center;
-      }
-      
-      .hero__title {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 700;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #00e5ff 0%, #3b82f6 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-      
-      .hero__subtitle {
-        font-size: 1.25rem;
-        color: var(--muted);
-        margin-bottom: 2rem;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      
-      .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: transform 0.2s ease;
-      }
-      
-      .btn:hover {
-        transform: translateY(-2px);
-      }
-    </style>
-    
-    <!-- Defer non-critical CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="assets/css/styles.css" /></noscript>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;!-- Meta Tags Otimizadas para SEO --&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;meta name="description" content="Descubra como a IA pode transformar seu negócio. Baixe nosso e-book gratuito e aprenda estratégias práticas para implementar IA na sua empresa."&gt;
+    &lt;meta name="keywords" content="IA para negócios, inteligência artificial, transformação digital, e-book IA, estratégias de IA"&gt;
+    &lt;meta name="author" content="1Negocios"&gt;
+    &lt;meta name="robots" content="index, follow"&gt;
+    &lt;meta property="og:title" content="IA para Negócios: Guia Prático"&gt;
+    &lt;meta property="og:description" content="Aprenda a usar IA para impulsionar seu negócio. Baixe agora!"&gt;
+    &lt;meta property="og:image" content="https://seusite.com/imagens/og-image.jpg"&gt;
+    &lt;meta property="og:url" content="https://seusite.com"&gt;
+    &lt;meta property="og:type" content="website"&gt;
+    &lt;meta name="twitter:card" content="summary_large_image"&gt;
+    &lt;meta name="twitter:title" content="IA para Negócios: Guia Prático"&gt;
+    &lt;meta name="twitter:description" content="Descubra o poder da IA nos negócios."&gt;
+    &lt;meta name="twitter:image" content="https://seusite.com/imagens/twitter-image.jpg"&gt;
 
-    <!-- SEO: Schema Markup (JSON-LD) -->
-    <script type="application/ld+json">
+    &lt;title&gt;IA para Negócios: Transforme Sua Empresa com Inteligência Artificial&lt;/title&gt;
+
+    &lt;!-- CSS Crítico Inline para Above-the-Fold --&gt;
+    &lt;style&gt;
+        /* Estilos críticos para hero section */
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background-color: #f0f4f8; color: #333; }
+        header { background: linear-gradient(135deg, #4a90e2, #9013fe); color: white; text-align: center; padding: 60px 20px; }
+        h1 { font-size: 2.5em; margin-bottom: 20px; }
+        canvas { display: block; margin: 0 auto; border: 1px solid #ddd; background: #fff; }
+        /* Mais estilos críticos... */
+    &lt;/style&gt;
+
+    &lt;!-- Defer CSS Não Crítico --&gt;
+    &lt;link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'"&gt;
+    &lt;noscript&gt;&lt;link rel="stylesheet" href="styles.css"&gt;&lt;/noscript&gt;
+
+    &lt;!-- Schema Markup JSON-LD --&gt;
+    &lt;script type="application/ld+json"&gt;
     {
       "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "name": "NNegócios",
-          "url": "https://nnegocios.com.vc",
-          "logo": "https://nnegocios.com.vc/assets/images/logo.png",
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+55-48-99150-3001",
-            "contactType": "Customer Service"
-          },
-          "sameAs": []
-        },
-        {
-          "@type": "WebSite",
-          "url": "https://nnegocios.com.vc",
-          "name": "NNegócios",
-          "publisher": {
-            "@type": "Organization",
-            "name": "NNegócios"
-          }
-        },
-        {
-          "@type": "WebPage",
-          "url": "https://nnegocios.com.vc",
-          "name": "NNegócios - Ecossistema de Oportunidades e Investimentos",
-          "description": "Descubra oportunidades únicas em economia, desenvolvimento imobiliário e investimentos seguros. Acesse nosso e-book exclusivo!",
-          "isPartOf": {
-            "@type": "WebSite",
-            "url": "https://nnegocios.com.vc"
-          },
-          "primaryImageOfPage": {
-            "@type": "ImageObject",
-            "url": "https://nnegocios.com.vc/assets/images/hero-bg-1.png"
-          }
-        },
-        {
-          "@type": "Book",
-          "name": "E-book: Economia, Desenvolvimento Imobiliário e Investimento Seguro",
-          "author": {
-            "@type": "Organization",
-            "name": "NNegócios"
-          },
-          "url": "https://nnegocios.com.vc/#lead-capture",
-          "workExample": [
-            {
-              "@type": "Book",
-              "isbn": "",
-              "bookEdition": "1st Edition",
-              "bookFormat": "https://schema.org/EBook",
-              "potentialAction": {
-                "@type": "ReadAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://nnegocios.com.vc/#lead-capture",
-                  "actionPlatform": [
-                    "https://schema.org/DesktopWebPlatform",
-                    "https://schema.org/IOSPlatform",
-                    "https://schema.org/AndroidPlatform"
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "O que é a NNegócios?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "<p>A NNegócios é um ecossistema de oportunidades e investimentos focado em conectar empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado. Atuamos para gerar valor através de curadoria, governança e análise de cenários econômicos.</p>"
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Para quem é o e-book?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "<p>Nosso e-book é ideal para empreendedores, investidores, profissionais do mercado imobiliário e qualquer pessoa interessada em entender as dinâmicas econômicas atuais e oportunidades de investimento seguro.</p>"
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Como recebo o e-book?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "<p>Após preencher o formulário com seus dados, você receberá o link para download do e-book diretamente no seu WhatsApp em instantes.</p>"
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "É realmente gratuito?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "<p>Sim! Nosso e-book é 100% gratuito. Acreditamos no poder da educação e informação para transformar oportunidades em resultados concretos.</p>"
-              }
-            }
-          ]
-        }
+      "@type": "Organization",
+      "name": "1Negocios",
+      "url": "https://seusite.com",
+      "logo": "https://seusite.com/imagens/logo.png",
+      "sameAs": [
+        "https://facebook.com/1negocios",
+        "https://twitter.com/1negocios",
+        "https://linkedin.com/company/1negocios"
       ]
     }
-    </script>
-  </head>
-  <body>
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="hero__bg"></div>
-      <div class="container">
-        <div class="hero__content">
-          <h1 class="hero__title">Ecossistema de Oportunidades</h1>
-          <p class="hero__subtitle">Conectamos empreendedores, investidores e compradores a ativos reais, projetos e inteligência de mercado</p>
-          <a href="#lead-capture" class="btn">Acessar E-book Gratuito</a>
-        </div>
-      </div>
-    </section>
+    &lt;/script&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://seusite.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://seusite.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    &lt;/script&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "IA para Negócios",
+      "description": "Guia prático sobre IA para negócios",
+      "publisher": {
+        "@type": "Organization",
+        "name": "1Negocios"
+      }
+    }
+    &lt;/script&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "IA para Negócios: Guia Prático",
+      "author": "1Negocios",
+      "url": "https://seusite.com/ebook",
+      "bookFormat": "EBook",
+      "isbn": "978-1-234567-89-0"
+    }
+    &lt;/script&gt;
+    &lt;script type="application/ld+json"&gt;
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "O que é IA para negócios?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IA para negócios envolve o uso de tecnologias de inteligência artificial para otimizar processos, melhorar decisões e impulsionar o crescimento."
+        }
+      },{
+        "@type": "Question",
+        "name": "Como baixar o e-book?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Preencha o formulário na página e receba o link de download por e-mail."
+        }
+      }]
+    }
+    &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Transforme Seu Negócio com IA&lt;/h1&gt;
+        &lt;p&gt;Baixe nosso e-book gratuito e descubra como a Inteligência Artificial pode revolucionar sua empresa.&lt;/p&gt;
+        &lt;canvas id="neuralNetwork" width="800" height="400"&gt;&lt;/canvas&gt;
+    &lt;/header&gt;
 
-    <!-- Lead Capture Section -->
-    <section id="lead-capture" class="lead-section">
-      <div class="container">
-        <div class="lead-content">
-          <h2>E-book Exclusivo</h2>
-          <p><strong>Economia, Desenvolvimento Imobiliário e Investimento Seguro</strong></p>
-          <p>Receba insights valiosos e estratégias comprovadas diretamente no seu WhatsApp</p>
-          
-          <form id="lead-form" class="lead-form">
-            <input type="text" name="name" placeholder="Seu nome completo" required />
-            <input type="tel" name="phone" placeholder="Seu WhatsApp com DDD" required />
-            <input type="email" name="email" placeholder="Seu melhor e-mail" required />
-            <button type="submit">Receber E-book Gratuito</button>
-          </form>
-          
-          <div class="benefits">
-            <div class="benefit">
-              <span>🚀</span>
-              <p>Estratégias práticas</p>
-            </div>
-            <div class="benefit">
-              <span>💡</span>
-              <p>Insights exclusivos</p>
-            </div>
-            <div class="benefit">
-              <span>📈</span>
-              <p>Análise de mercado</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    &lt;section id="valor"&gt;
+        &lt;h2&gt;Por Que a IA é Essencial para Seu Negócio?&lt;/h2&gt;
+        &lt;ul&gt;
+            &lt;li&gt;Aumente a eficiência operacional&lt;/li&gt;
+            &lt;li&gt;Melhore a tomada de decisões com dados&lt;/li&gt;
+            &lt;li&gt;Personalize experiências para clientes&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/section&gt;
 
-    <!-- Scripts -->
-    <script src="assets/js/scripts.js"></script>
-  </body>
-</html>
+    &lt;section id="ebook"&gt;
+        &lt;h2&gt;Baixe Nosso E-book Gratuito&lt;/h2&gt;
+        &lt;form id="leadForm"&gt;
+            &lt;input type="text" placeholder="Nome" required&gt;
+            &lt;input type="email" placeholder="E-mail" required&gt;
+            &lt;input type="tel" placeholder="WhatsApp" required&gt;
+            &lt;button type="submit"&gt;Baixar Agora&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/section&gt;
+
+    &lt;section id="cta"&gt;
+        &lt;h2&gt;Agende uma Consultoria Gratuita&lt;/h2&gt;
+        &lt;p&gt;Fale com nossos especialistas sobre como implementar IA no seu negócio.&lt;/p&gt;
+        &lt;a href="https://calendly.com/seu-link" class="btn"&gt;Agendar Agora&lt;/a&gt;
+    &lt;/section&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2023 1Negocios. Todos os direitos reservados.&lt;/p&gt;
+    &lt;/footer&gt;
+
+    &lt;!-- Script para Animação de Rede Neural --&gt;
+    &lt;script&gt;
+        const canvas = document.getElementById('neuralNetwork');
+        const ctx = canvas.getContext('2d');
+        // Código para animação de rede neural...
+    &lt;/script&gt;
+
+    &lt;!-- Integração com WhatsApp e Outros --&gt;
+    &lt;script src="assets/js/whatsapp-integration.js" defer&gt;&lt;/script&gt;
+    &lt;script src="assets/js/n8n-integration.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
