@@ -1,0 +1,23 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+Dockerfile
+docker-compose.yml
+.env
+.env.example
+.nyc_output
+coverage
+.nyc_output
+.vscode
+.idea
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+# Arquivos de desenvolvimento
+workflows/
+assets/js/n8n-integration.js
+N8N-SETUP.md
